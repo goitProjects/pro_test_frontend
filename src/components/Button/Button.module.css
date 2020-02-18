@@ -1,0 +1,30 @@
+.link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 48px;
+  font-size: 10px;
+  font-family: 'MontserratBold', sans-serif;
+  color: #fff;
+  background-color: var(--orange);
+  transition: background-color 250ms ease-in-out;
+}
+
+.link:hover,
+.link:focus {
+  background-color: #e96105;
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: 14px;
+    width: 168px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .link {
+    width: 190px;
+  }
+}
