@@ -14,6 +14,12 @@ const DashboardPage = ({
   decreaseQuestionNumber,
   checkAnswer,
 }) => {
+  const proTestThemeLSData = localStorage.getItem('proTestTheme');
+  let proTestTheme = '';
+  if (proTestThemeLSData) {
+    proTestTheme = JSON.parse(proTestThemeLSData);
+  }
+
   return (
     <section className={styles.dashboardPage}>
       <div className={styles.dashboardPageContainer}>
@@ -33,7 +39,11 @@ const DashboardPage = ({
           <button
             className={styles.btnContainer__back}
             type="button"
-            onClick={decreaseQuestionNumber}
+            onClick={
+              proTestTheme === 'Техническая подготовка QA'
+                ? () => null
+                : decreaseQuestionNumber
+            }
             disabled={isDisabledBackBtn}
           >
             <Arrow className={styles.btnContainer__arrow_back} />

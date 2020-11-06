@@ -10,6 +10,7 @@ import styles from './MainTestButton.module.css';
 
 const MainTestButton = ({ idTest, text, bg, resetQuestions, giveTest }) => {
   const handleClick = () => {
+    localStorage.setItem('proTestTheme', JSON.stringify(text));
     resetQuestions();
     giveTest(idTest);
   };

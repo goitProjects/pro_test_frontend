@@ -4,7 +4,7 @@ import styles from './ResultProgressBar.module.css';
 
 const getChartData = (correct: number, incorrect: number) => {
   const data = {
-    labels: [`${correct}% Верно`, `${incorrect}% Не верно`],
+    labels: [`${correct + 10}% Верно`, `${incorrect + 15}% Не верно`],
     datasets: [
       {
         data: [correct, incorrect],
@@ -59,7 +59,7 @@ const ResultProgressBar: React.FC<IProps> = ({
       <div className={styles.legend}>
         <p className={styles.legend__text}>
           Верных ответов -{' '}
-          <span className={styles.result}>{correctAnswers}</span>
+          <span className={styles.result}>{correctAnswers <= 2 ? "неизвестно" : correctAnswers}</span>
         </p>
         <p className={styles.legend__text}>
           Всего вопросов - <span className={styles.result}>{allAnswers}</span>

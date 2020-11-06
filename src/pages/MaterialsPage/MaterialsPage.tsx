@@ -55,7 +55,7 @@ const MaterialsPage: React.FC = () => {
             <button
               id="sources"
               className={styles.showMoreButton}
-              onClick={onShowMore}
+              onClick={()=>null}
             >
               {extendedSources ? 'Свернуть' : 'Показать больше'}
             </button>
