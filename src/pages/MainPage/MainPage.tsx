@@ -9,8 +9,8 @@ interface IId {
 }
 
 const ID_NEED_TEST: IId = {
-  id1: '5e29edc351e2cd3a659a8e4e',
-  id2: '5e2de905933b4f3b74d81d59',
+  id1: '5fa71ccd6e58cb7e77accd3e',
+  id2: '5fa71f126e58cb7e77accd50',
 };
 
 const TEXT_BUTTON: Array<string> = ['Техническая подготовка QA', 'Теория тестирования'];
